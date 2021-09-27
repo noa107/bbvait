@@ -40,7 +40,7 @@ public class CityController {
     @CrossOrigin(origins="http://localhost:3000")
     @PostMapping
     public ResponseEntity createCity(@RequestBody City city) throws URISyntaxException {
-        City savedCity = cityRepository.save(city);
+        City savedCity = cityRepository.insert(city);
         return ResponseEntity.created(new URI("/cities/" + savedCity.getId())).body(savedCity);
     }
     @CrossOrigin(origins="http://localhost:3000")
