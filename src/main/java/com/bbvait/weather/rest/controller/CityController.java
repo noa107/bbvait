@@ -20,6 +20,7 @@ import com.bbvait.weather.service.dao.repository.CityRepository;
 
 @RestController
 @RequestMapping("/cities")
+@CrossOrigin(origins="*")
 public class CityController {
 
     private final CityRepository cityRepository;
@@ -27,23 +28,23 @@ public class CityController {
     public CityController(CityRepository cityRepository) {
         this.cityRepository = cityRepository;
     }
-    @CrossOrigin(origins="https://noa107.github.io/bbvait-front-react/")
+   
     @GetMapping
     public List<City> getcities() {
         return cityRepository.findAll();
     }
-    @CrossOrigin(origins="https://noa107.github.io/bbvait-front-react/")
+   
     @GetMapping("/{id}")
     public City getCity(@PathVariable Long id) {
         return cityRepository.findById(id).orElseThrow(RuntimeException::new);
     }
-    @CrossOrigin(origins="https://noa107.github.io/bbvait-front-react/")
+   
     @PostMapping
     public ResponseEntity createCity(@RequestBody City city) throws URISyntaxException {
         City savedCity = cityRepository.insert(city);
         return ResponseEntity.created(new URI("/cities/" + savedCity.getId())).body(savedCity);
     }
-    @CrossOrigin(origins="https://noa107.github.io/bbvait-front-react/")
+   
     @PutMapping("/{id}")
     public ResponseEntity updateCity(@PathVariable Long id, @RequestBody City city) {
         City currentCity = cityRepository.findById(id).orElseThrow(RuntimeException::new);
@@ -52,7 +53,7 @@ public class CityController {
 
         return ResponseEntity.ok(currentCity);
     }
-    @CrossOrigin(origins="https://noa107.github.io/bbvait-front-react/")
+   
     @DeleteMapping("/{id}")
     public ResponseEntity deleteCity(@PathVariable Long id) {
         cityRepository.deleteById(id);
