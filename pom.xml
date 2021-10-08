@@ -8,7 +8,7 @@
 		<version>2.5.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.bbva</groupId>
+	<groupId>com.weather</groupId>
 	<artifactId>technicalInterview</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>crudCities</name>

@@ -1,4 +1,4 @@
-package com.bbvait.weather;
+package com.weather;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

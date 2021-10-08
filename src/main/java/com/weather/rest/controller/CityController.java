@@ -1,4 +1,4 @@
-package com.bbvait.weather.rest.controller;
+package com.weather.rest.controller;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bbvait.weather.service.dao.entity.City;
-import com.bbvait.weather.service.dao.repository.CityRepository;
+import com.weather.service.dao.entity.City;
+import com.weather.service.dao.repository.CityRepository;
 
 @RestController
 @RequestMapping("/cities")

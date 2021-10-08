@@ -1,4 +1,4 @@
-package com.bbvait.weather.service.dao.entity;
+package com.weather.service.dao.entity;
 
 
 

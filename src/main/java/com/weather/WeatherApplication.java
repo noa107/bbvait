@@ -1,4 +1,4 @@
-package com.bbvait.weather;
+package com.weather;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
